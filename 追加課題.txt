@@ -1,0 +1,39 @@
+追加課題１
+　第2回で実施したMNISTの課題を、CNN（畳み込みニューラルネットワーク）を用いて実施してください。
+　
+　・モデルや事前処理の変更点としては、
+　　まず28x28の入力のままで済みますので、１次元化は不要になります。
+　　またモデル内の層でDenseを使っていたところは、Conv2DやMaxPooling2Dになります。
+　・正答率がどうなるか、既存の物と比較してください。
+　・正解のコードは、ChatGPTに以下のプロンプトを入力して得てください。
+　
+　　TensorflowとKerasを用い、MNIST課題を解くためのモデルを学習させたいです。
+　　モデルにはCNNを用いてください。
+　　学習と推論を実施するコードを作成してください。
+追加課題２
+　追加課題１で得られたモデルを、３日目のWebアプリに適用してください。
+　
+追加課題３
+　EarlyStoppingを試します。
+　これは、Epochを増やしすぎるとかえって精度が落ちる問題
+　（過学習と言います）を自動で防ぐ機構です。
+　
+　例えば次のようなコードになります。
+　
+  from keras.callbacks import EarlyStopping
+  history = model.fit(x_train, y_train_label,
+                   batch_size=128,
+                   epochs=100,
+                   verbose=1,
+                   callbacks=[EarlyStopping()],
+                   validation_data=(x_test, y_test_label))
+　2日目のMNIST課題に適用しましょう。
+　epochsが100となっていますが、何epoch目で止まるか確認しましょう。
+追加課題４
+　ハイパーパラメーターの最適化を試しましょう。
+　Optunaというライブラリを使います。
+　https://qiita.com/ryota717/items/28e2167ea69bee7e250d
+　
+　層の数や最適化関数を変更し、どの組み合わせが適しているかを探索します。
+　
+　※最初はいっぺんに組み合わせを試さず、少ない組み合わせから試しましょう。

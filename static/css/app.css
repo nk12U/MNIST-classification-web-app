@@ -1,0 +1,86 @@
+.body {
+  background-color: #F5F5F5;
+  margin: 0px;
+  padding: 0px;
+}
+
+.header {
+  margin: 0px 0px 20px 0px;
+  padding: 10px 10px 10px 30px;
+  background: #000051;
+  font-size: 2em;
+  color: #FFFFFF;
+  font-weight: bold;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.6));
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  margin: 0px auto;
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  background: #F5F5F5 text-align: center;
+}
+
+.block_element {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 30px 30px 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.num_canvas {
+  width: 280px;
+  height: 280px;
+  margin: 0px;
+  font-size: 10em;
+  line-height: 280px;
+  background-color: white;
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.6));
+}
+
+.button_panel {
+  display: inline-flex;
+  justify-content: center;
+}
+
+.button {
+  margin: 0px 10px 0px 10px;
+  width: 120px;
+  padding: 0.8em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 25px;
+  border: medium none;
+  outline: medium none;
+  font-size: 1em;
+  filter: drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.6));
+}
+
+.button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:active {
+  transform: translateY(4px);
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+}
+
+.clear-button {
+  color: #272780;
+  background: #DBDBF4;
+}
+
+.send-button {
+  color: #FFFFFF;
+  background: #272780;
+}

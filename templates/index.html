@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>数字認識</title>
+    <meta http-equiv="content-type" charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="/static/js/app.js"></script>
+    <link rel="stylesheet" href="/static/css/app.css">
+  </head>
+  <body onload="initCanvas();" class="body">
+
+    <div class="header">
+      数字認識
+    </div>
+    
+    <div class="container">
+
+      <b>枠内に手書きで0～9の数字のどれかを書いて「認識」ボタンを押してください</b>
+
+      <div class="block">
+        <div class="block_element">
+          <h2>手書き</h2>
+          <canvas class="num_canvas" id="canvas" width="280px" height="280px"></canvas>
+        </div>
+        <div class="block_element">
+          <h2>結果</h2>
+          <div class="num_canvas" id="result">？</div>
+        </div>
+      </div>
+
+      <div class="button_panel">
+        <form action="/" method="post">
+          <button type="button" class="button clear-button" onclick="clearCanvas();">クリア</button>
+          <button type="button" class="button send-button" id="img"  name="img" onclick="sendImage();">認識</button>
+        </form>
+      </div>
+
+    </div>
+
+  </body>
+</html>
