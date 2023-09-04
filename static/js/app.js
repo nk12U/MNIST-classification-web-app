@@ -130,13 +130,12 @@ function sendImage() {
     // リクエストを送信し、返ってきたレスポンスに入っている結果を表示に反映する
     $.ajax({
         type: "POST",
-        url: "http://127.0.0.1:8000",
+        url: "http://127.0.0.1:8002",
         data: {
-        "img": img
+            "img": img
         },
     })
-    .done( (data) => {
-        //★
-        $('#result').html(data["result"])
-    });
+        .done((data) => {
+            $('#result').html(data["result"])
+        });
 }

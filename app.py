@@ -12,7 +12,7 @@ from fastapi.templating import Jinja2Templates
 app = FastAPI()
 
 # cnnのモデルを読み込む
-model = tf.keras.models.load_model("./model_cnn_ver2.keras")
+model = tf.keras.models.load_model("./model_cnn_ver3.keras")
 
 # index.htmlおよびstatic以下のファイル読み込み用設定
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -64,7 +64,7 @@ def predict_image(x):
     x = x.reshape(1, 28, 28, 1)
 
     # 画素の正規化。
-    x = x.astype('float32')
+    x = x.astype("float32")
     x /= 255
 
     # 予測。結果配列から1枚目分を取り出して返す。
@@ -77,7 +77,7 @@ def save_image(img):
     渡された画像をファイルに保存する。
     imageディレクトリ配下に日時をファイル名として保存する。
     """
-    datetime_str = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+    datetime_str = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     cv2.imwrite(f"images/{datetime_str}.jpg", img)
 
 

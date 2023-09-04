@@ -1,0 +1,5 @@
+fastapi==0.103.0
+uvicorn[standard]
+opencv-python==4.8.0.76
+python-multipart==0.0.6
+jinja2
