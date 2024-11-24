@@ -12,7 +12,7 @@ from fastapi.templating import Jinja2Templates
 app = FastAPI()
 
 # cnnのモデルを読み込む
-model = tf.keras.models.load_model("./model_cnn_ver3.keras")
+model = tf.keras.models.load_model("./model_cnn.keras")
 
 # index.htmlおよびstatic以下のファイル読み込み用設定
 app.mount("/static", StaticFiles(directory="static"), name="static")

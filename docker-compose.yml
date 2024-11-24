@@ -1,12 +1,11 @@
-version: '3'
 services:
   app:
     build: .
-    container_name: 'ml_school'
+    container_name: 'MNIST-classification-web-app'
     tty: true
     volumes:
       # マウントするディレクトリ
       - .:/app
     ports:
       # ホスト側のポート：コンテナ側のポート
-            - 8002:8002
+            - 8000:8000
