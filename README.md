@@ -2,12 +2,15 @@
 
 ## Overview
 
-This project implements web application of MNIST classification.  
+This project implements web application of MNIST classification. 
+
+## Architecture
+
 - Frontend: JavaScript
 - Backend: Python
 - Framework: FastAPI
 
-<img src = "https://github.com/nk12U/MNIST-classification-web-app/blob/main/screenshot.png"> 
+<img src = "https://github.com/nk12U/MNIST-classification-web-app/blob/main/architecture.png"> 
 
 ## Command
 
@@ -21,4 +24,6 @@ Inside the container
 $ uvicorn app:app --host 0.0.0.0 --port 8000
 ```
 
-access http://localhost:8000 with browser 
+access http://localhost:8000 with browser  
+
+<img src = "https://github.com/nk12U/MNIST-classification-web-app/blob/main/screenshot.png"> 
